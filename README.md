@@ -3,8 +3,21 @@
 `detour-radio` is a small CLI for exploratory Spotify discovery outside your
 usual listening bubble.
 
-It generates Spotify-friendly discovery queries with `claude`, searches Spotify
-for artists or albums, avoids recent repeats when possible, and then:
+It generates Spotify-friendly discovery queries with `claude`, then searches
+Spotify for artists or albums using phrases such as:
+- `ethiopian jazz`
+- `zamrock 1970s`
+- `thai molam`
+- `turkish psych rock`
+- `colombian cumbia rebajada`
+- `minimal wave belgium`
+
+For each run, it searches Spotify, keeps the original Spotify result order,
+filters out recent repeats when possible, and then randomly picks from the
+remaining candidates. If every result was seen recently, it falls back to a
+random pick from the full result set for that query.
+
+After selecting a result, it:
 - opens the artist page for artist mode
 - starts full album playback for album mode
 
