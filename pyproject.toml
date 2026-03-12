@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "detour-radio"
+version = "1.0.0"
+description = "CLI for exploratory Spotify discovery detours"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+detour-radio = "detour_radio.cli:main"
+
+[dependency-groups]
+test = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = [
+    "--verbose",
+    "-ra",
+]
+
+[tool.setuptools.packages.find]
+include = ["detour_radio*"]
