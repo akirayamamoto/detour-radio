@@ -12,16 +12,11 @@ Spotify for artists or albums using phrases such as:
 - `colombian cumbia rebajada`
 - `minimal wave belgium`
 
-For each run, it searches Spotify, keeps the original Spotify result order,
-filters out recent repeats when possible, and then randomly picks from the
-remaining candidates. If every result was seen recently, it falls back to a
-random pick from the full result set for that query.
+For each run, it searches Spotify, filters out recent repeats when possible, and then randomly picks from the remaining candidates.
 
 After selecting a result, it:
 - opens the artist page for artist mode
 - starts full album playback for album mode
-
-Installation is cross-platform with `uv`.
 
 ## Install
 
