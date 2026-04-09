@@ -41,8 +41,10 @@ uv tool install -e .
 
 ## Setup
 
-Create a Spotify app in the Spotify Developer Dashboard and copy its
-`client_id`:
+Each user needs their own Spotify app (Spotify's rate limits and ToS are
+per-app, so a shared client ID would break for everyone if abused).
+
+Create one in the Spotify Developer Dashboard and copy its `client_id`:
 
 - https://developer.spotify.com/dashboard
 
